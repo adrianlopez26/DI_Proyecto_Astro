@@ -1,0 +1,137 @@
+---
+---
+<section class="hero">
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <h1>Bienvenido a TiendaTech</h1>
+    <p>Encuentra los mejores productos tecnológicos al mejor precio.</p>
+    <a href="/productos" class="btn">Ver Productos</a>
+  </div>
+</section>
+
+<section class="features">
+  <div class="feature">
+    <img src="../../public/envio-rapido.png" alt="Envío Rápido">
+    <h3>Envío Rápido</h3>
+    <p>Recibe tus productos en tiempo récord con nuestro servicio de envío rápido.</p>
+  </div>
+  <div class="feature">
+    <img src="../../public/support.png" alt="Soporte 24/7">
+    <h3>Soporte 24/7</h3>
+    <p>Estamos aquí para ayudarte en cualquier momento, todos los días del año.</p>
+  </div>
+  <div class="feature">
+    <img src="../../public/Garantia.webp" alt="Garantía de Calidad">
+    <h3>Garantía de Calidad</h3>
+    <p>Todos nuestros productos están garantizados para ofrecerte la mejor calidad.</p>
+  </div>
+</section>
+
+<style>
+  .hero {
+    position: relative;
+    background-image: src('../../public/DALL·E 2024-12-11 12.39.21 - A visually striking and futuristic background image for a technology and computing products website. The image features a sleek and modern digital des.webp');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    padding: 20px;
+  }
+
+  .hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Overlay oscuro */
+    z-index: 1;
+  }
+
+  .hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 600px;
+  }
+
+  .hero h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    animation: fadeInDown 1s ease-out;
+  }
+
+  .hero p {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+    animation: fadeInUp 1s ease-out;
+  }
+
+  .hero .btn {
+    padding: 10px 20px;
+    background-color: #0078d4;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    animation: fadeInUp 1s ease-out;
+  }
+
+  .hero .btn:hover {
+    background-color: #005a9e;
+  }
+
+  @keyframes fadeInDown {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .features {
+    display: flex;
+    justify-content: space-around;
+    padding: 50px 20px;
+    background-color: #f9f9f9;
+  }
+
+  .feature {
+    text-align: center;
+    max-width: 300px;
+  }
+
+  .feature img {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 20px;
+  }
+
+  .feature h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #0078d4;
+  }
+
+  .feature p {
+    color: #555;
+    font-size: 1rem;
+  }
+</style>

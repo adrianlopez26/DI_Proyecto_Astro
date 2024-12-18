@@ -1,0 +1,149 @@
+<section>
+  <div class="carousel-container">
+    <div class="carousel-track">
+      <div class="carousel-item">
+        <img src="../../public/applemacpro.jpg" alt="Producto 3">
+        <h3>Apple Mac Pro</h3>
+        <p>4000€</p>
+      </div>
+      <div class="carousel-item">
+        <img src="../../public/nvidiaa40.jpg" alt="Producto 4">
+        <h3>Nvidia A40</h3>
+        <p>4700€</p>
+      </div>
+      <div class="carousel-item">
+        <img src="../../public/acernitro.jpg" alt="Producto 5">
+        <h3>Acer Nitro</h3>
+        <p>1000€</p>
+      </div>
+      <div class="carousel-item">
+        <img src="../../public/asusazoth.jpg" alt="Producto 6">
+        <h3>Asus Azoth</h3>
+        <p>299€</p>
+      </div>
+      <div class="carousel-item">
+        <img src="../../public/asusproart.jpg" alt="Producto 7">
+        <h3>Asus Pro Art</h3>
+        <p>1269€</p>
+      </div>
+      <div class="carousel-item">
+        <img src="../../public/boostcharge.jpg" alt="Producto 8">
+        <h3>Boost Charge</h3>
+        <p>300€</p>
+      </div>
+      <div class="carousel-item">
+        <img src="../../public/razerorochi.jpg" alt="Producto 9">
+        <h3>Razer Orochi</h3>
+        <p>1000€</p>
+      </div>
+      <div class="carousel-item">
+        <img src="../../public/sf1000.jpg" alt="Producto 10">
+        <h3>Volante SF1000</h3>
+        <p>1099€</p>
+      </div>
+      <div class="carousel-item">
+        <img src="../../public/msicreator.jpg" alt="Producto 11">
+        <h3>Msi Creator</h3>
+        <p>500€</p>
+      </div>
+      <div class="carousel-item">
+        <img src="../../public/airpords4.jpg" alt="Producto 12">
+        <h3>Airpods 4</h3>
+        <p>200€</p>
+      </div>
+      <div class="carousel-item">
+        <img src="../../public/iphone13.jpg" alt="Producto 13">
+        <h3>Apple iPhone 13</h3>
+        <p>550€</p>
+      </div>
+      <div class="carousel-item">
+        <img src="../../public/samsunggalaxys21.jpg" alt="Producto 14">
+        <h3>Samsung Galaxy S21</h3>
+        <p>500€</p>
+      </div>
+    </div>
+    <button class="carousel-btn prev">❮</button>
+    <button class="carousel-btn next">❯</button>
+  </div>
+</section>
+
+<script type="module" src="../../src/scripts/carrusel.ts"></script>
+
+<style>
+  .carousel-container {
+    position: relative;
+    overflow: hidden;
+    max-width: 700px;
+    margin: 50px auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    opacity: 0; /* Inicialmente oculto para la animación de fundido */
+    transform: scale(0.95) translateY(20px); /* Inicialmente más pequeño y desplazado hacia abajo */
+    animation: fadeIn 1s forwards ease-out; /* Animación de fundido */
+  }
+
+  @keyframes fadeIn {
+    to {
+      opacity: 1;
+      transform: scale(1) translateY(0); /* Escala y posición final */
+    }
+  }
+
+  .carousel-track {
+    display: flex;
+    transition: transform 0.5s ease;
+  }
+
+  .carousel-item {
+    min-width: 100%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    background-color: #fff;
+    padding: 20px;
+    box-sizing: border-box;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transición para el efecto de sombra */
+  }
+
+  .carousel-item:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Sombra más intensa al pasar el ratón */
+    transform: scale(1.02); /* Efecto de zoom al pasar el ratón */
+  }
+
+  .carousel-item img {
+    width: 100%;
+    height: 400px; /* Establece una altura fija para todas las imágenes */
+    object-fit: contain; /* Asegura que la imagen se ajuste dentro del área sin recortarse */
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+  }
+
+  .carousel-item img:hover {
+    transform: scale(1.05);
+  }
+
+  .carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgb(255, 255, 255);
+    color: rgb(12, 109, 199);
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 10;
+    border-radius: 50%;
+    transition: background 0.3s ease;
+  }
+
+  .carousel-btn:hover {
+    background: rgb(255, 255, 255);
+  }
+
+  .carousel-btn.prev {
+    left: 10px;
+  }
+
+  .carousel-btn.next {
+    right: 10px;
+  }
+</style>

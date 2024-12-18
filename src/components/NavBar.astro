@@ -1,0 +1,104 @@
+---
+---
+<nav class="navbar">
+  <div class="logo">
+    <a href="/">TiendaTech</a>
+  </div>
+  <ul class="nav-links">
+    <li><a href="/">Inicio</a></li>
+    <li><a href="/productos">Productos</a></li>
+    <li><a href="/servicios">Servicios</a></li>
+    <li><a href="/contacto">Contacto</a></li>
+  </ul>
+  <button class="burger" aria-label="Abrir menú">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+</nav>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const burger = document.querySelector(".burger");
+    const navLinks = document.querySelector(".nav-links");
+
+    if (burger && navLinks) {
+      burger.addEventListener("click", () => {
+        navLinks.classList.toggle("active");
+      });
+    }
+  });
+</script>
+
+<style>
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    background-color: #222;
+    color: white;
+  }
+
+  .logo a {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #fff;
+    text-decoration: none;
+  }
+
+  .nav-links {
+    display: flex;
+    list-style: none;
+    gap: 15px;
+  }
+
+  .nav-links li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    transition: background-color 0.3s;
+  }
+
+  .nav-links li a:hover {
+    background-color: #444;
+  }
+
+  .burger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    background: none;
+    border: none;
+  }
+
+  .burger span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: white;
+  }
+
+  @media screen and (max-width: 768px) {
+    .nav-links {
+      display: none;
+      flex-direction: column;
+      gap: 10px;
+      position: absolute;
+      top: 60px;
+      right: 20px;
+      background-color: #222;
+      padding: 10px;
+      border-radius: 5px;
+    }
+
+    .nav-links.active {
+      display: flex;
+    }
+
+    .burger {
+      display: flex;
+    }
+  }
+</style>

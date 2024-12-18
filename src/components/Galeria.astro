@@ -1,0 +1,35 @@
+---
+---
+<section class="galeria">
+  <h2>Explora Nuestra Tecnología</h2>
+  <div class="galeria-grid">
+    <img src="/assets/tech1.jpg" alt="Tecnología 1">
+    <img src="/assets/tech2.jpg" alt="Tecnología 2">
+    <img src="/assets/tech3.jpg" alt="Tecnología 3">
+    <img src="/assets/tech4.jpg" alt="Tecnología 4">
+  </div>
+</section>
+
+<style>
+  .galeria {
+    padding: 20px;
+    text-align: center;
+  }
+
+  .galeria-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+  }
+
+  .galeria-grid img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    transition: transform 0.3s;
+  }
+
+  .galeria-grid img:hover {
+    transform: scale(1.05);
+  }
+</style>
